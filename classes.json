@@ -1,0 +1,51 @@
+{
+    "classes":[
+        {
+            "lesson": "Construção de Software",
+            "periods": [
+                "2LM",
+                "4LM"
+            ],
+            "url": "https://pucrs.zoom.us/j/93506326606?pwd=dUNqaytKUng0b3VXWmJxK2Q2blZaUT09"
+        },
+        {
+            "lesson": "Programação Distribuída",
+            "periods": [
+                "2NP",
+                "4NP"
+            ],
+            "url": "https://google.com"
+        },
+        {
+            "lesson": "Gerenciamento de Projeto de Software",
+            "periods": [
+                "3JK",
+                "5JK"
+            ],
+            "url": "https://google.com"
+        },
+        {
+            "lesson": "Manutenção de Software",
+            "periods": [
+                "3LM"
+            ],
+            "url": "https://google.com"
+        },
+        {
+            "lesson": "Inteligência Artificial",
+            "periods": [
+                "3NP",
+                "5NP"
+            ],
+            "url": "https://google.com"
+        },
+        {
+            "lesson": "AGES III",
+            "periods": [
+                "6LM",
+                "6NP"
+            ],
+            "url": "https://google.com"
+        }
+    ]
+}
