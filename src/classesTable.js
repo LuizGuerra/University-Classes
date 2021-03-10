@@ -1,5 +1,8 @@
+// Mocked data
 let data = "{\"classes\":[{\"lesson\":\"Constru\u00e7\u00e3o de Software\",\"periods\":[\"2LM\",\"4LM\"],\"url\":\"https:\/\/pucrs.zoom.us\/j\/93506326606?pwd=dUNqaytKUng0b3VXWmJxK2Q2blZaUT09\"},{\"lesson\":\"Programa\u00e7\u00e3o Distribu\u00edda\",\"periods\":[\"2NP\",\"4NP\"],\"url\":\"https:\/\/google.com\"},{\"lesson\":\"Gerenciamento de Projeto de Software\",\"periods\":[\"3JK\",\"5JK\"],\"url\":\"https:\/\/google.com\"},{\"lesson\":\"Manuten\u00e7\u00e3o de Software\",\"periods\":[\"3LM\"],\"url\":\"https:\/\/google.com\"},{\"lesson\":\"Intelig\u00eancia Artificial\",\"periods\":[\"3NP\",\"5NP\"],\"url\":\"https:\/\/google.com\"},{\"lesson\":\"AGES III\",\"periods\":[\"6LM\",\"6NP\"],\"url\":\"https:\/\/google.com\"}]}"
 
+
+// Constants
 const headerTexts = ['Período','Segunda','Terça','Quarta','Quinta','Sexta','Sábado','Domingo']
 const times = ['AB', 'CD', 'FG', 'HI', 'JK', 'LM', 'NP'];
 
@@ -8,28 +11,6 @@ class Lesson {
         this.name = name;
         this.url = url;
     }
-}
-
-// 0:Monday, 1:Tuesday, 2:Wednesday, 3:Thursday, 4:Friday
-// 5:Saturday, 6:Sunday
-function dayOfTheWeekIndex(str) {
-    let index = parseInt(str.charAt(0)) - 2;
-    return index == -1 ? 6 : index;
-}
-
-function timeOfTheDayIndex(str) {
-    return times.indexOf(str.slice(1));
-}
-
-function createMatrix() {
-    var mtz = [];
-    for (var i = 0; i < 7; i++) {
-        mtz.push([]);
-        for (_ in times) {
-            mtz[i].push(null);
-        }
-    }
-    return mtz;
 }
 
 function fetchClasses() {
@@ -49,26 +30,6 @@ function prepareData(classes) {
         }
     }
     return matriz;
-}
-
-function createTh(str) {
-    var th = document.createElement('th');
-    th.innerHTML = str;
-    return th;
-}
-
-function createTd(str) {
-    var th = document.createElement('td');
-    th.innerHTML = str;
-    return th;
-}
-
-function tdWithLink(lesson) {
-    var a = document.createElement('a');
-    a.innerHTML = lesson.name;
-    a.href = lesson.url;
-    a.target = "_blank";
-    return a;
 }
 
 function createTable(data) {
@@ -93,16 +54,17 @@ function createTable(data) {
                 row.appendChild( createTd(" ") );
             } else {
                 var td = document.createElement('td');
+                td.classList.add("tableCustomization");
                 td.appendChild( tdWithLink(classes[index][i]) );
                 row.appendChild(td);
             }
         }
-
         table.appendChild(row);
     }
 
     
-    table.classList.add("centered");
+    table.classList.add("tablePosition");
+    table.classList.add("tableCustomization");
 
     body.appendChild(table);
 
@@ -129,6 +91,32 @@ createTable(data);
 
 // console.log(string.includes(substring));
 
+// ==============================================================================
+//                      FILE EXCLUSIVE AUXILIAR FUNCTIONS
+// ==============================================================================
+
+// 0:Monday, 1:Tuesday, 2:Wednesday, 3:Thursday, 4:Friday
+// 5:Saturday, 6:Sunday
+function dayOfTheWeekIndex(str) {
+    let index = parseInt(str.charAt(0)) - 2;
+    return index == -1 ? 6 : index;
+}
+
+function timeOfTheDayIndex(str) {
+    return times.indexOf(str.slice(1));
+}
+
+function createMatrix() {
+    var mtz = [];
+    for (var i = 0; i < 7; i++) {
+        mtz.push([]);
+        for (_ in times) {
+            mtz[i].push(null);
+        }
+    }
+    return mtz;
+}
+
 function occurOnWeekend(times) {
     return times.length === 0 ? false :
       (times[0].includes('1') || times[0].includes('7')) || occurOnWeekend(times.slice(1));
@@ -141,4 +129,31 @@ function haveClassOnWeekend(classes) {
         }
     }
     return false;
+}
+
+
+// ==============================================================================
+//                         GENERAL AUXILIAR FUNCTIONS
+// ==============================================================================
+
+function createTh(str) {
+    var th = document.createElement('th');
+    th.innerHTML = str;
+    th.classList.add("tableCustomization");
+    return th;
+}
+
+function createTd(str) {
+    var td = document.createElement('td');
+    td.innerHTML = str;
+    td.classList.add("tableCustomization");
+    return td;
+}
+
+function tdWithLink(lesson) {
+    var a = document.createElement('a');
+    a.innerHTML = lesson.name;
+    a.href = lesson.url;
+    a.target = "_blank";
+    return a;
 }

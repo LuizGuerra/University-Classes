@@ -7,7 +7,12 @@
 	vertical-align: baseline;
 }
 
-table, th, td {
+table {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.tableCustomization {
     border: 1px solid #272727;
     border-collapse: collapse;
     text-align: center;
@@ -16,10 +21,11 @@ table, th, td {
 
 th, td {
     padding: 8px 8px;
+    width: 100px;
 }
 
 th {
-    min-width: 100px;
+    /* min-width: 100px; */
     height: 16px;
     font-weight: bold;
 }
@@ -30,9 +36,89 @@ a {
     display: block;
 }
 
-.centered {
-    position: fixed;
-    top: 50%;
+input {
+    box-sizing: border-box;
+    border-style: groove;
+    border-color: gray;
+    border-width: 1px;
+    user-select: none;
+}
+
+.nameInputStyle {
+    width: 50ch;
+    padding: 8px 8px;
+    margin: 8px 0;
+}
+
+.periodsInputStyle {
+    width: 6ch;
+    padding: 8px 8px;
+    margin: 8px 0;
+    /* text-align: center; */
+    text-transform: uppercase;
+}
+
+.urlInputStyle {
+    width: 100ch;
+    padding: 8px 8px;
+    margin: 8px 0;
+}
+
+.addPeriodButton {
+    text-align: center;
+    /* text-decoration: none; */
+    font-size: 20px;
+    width: 40px;
+    height: 40px;
+    border-radius: 20px;
+    border-style: solid;
+    border-color: darkgray;
+    border-width: 0.5px;
+}
+
+/* .tablePosition {
+    position: relative; */
+    /* position: fixed;
+    top: 10%;
     left: 50%;
-    transform: translate(-50%, -50%);
+    transform: translate(-50%, -10%); */
+/* } */
+
+/* .inputPosition {
+    position: relative; */
+    /* position: fixed;
+    top: 90%;
+    left: 50%;
+    transform: translate(-50%, -90%); */
+/* } */
+
+.saveButton {
+    background-color: #272727;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 4px;
+}
+
+inputDiv {
+    width: 930px;
+    height: 300px;
+    border-style: solid;
+    border-color: #272727;
+    border-width: 1px;
+}
+
+wrapper {
+    padding: 20px 20px 20px 20px;
+}
+
+#block1 {
+    float: left;
+    padding-left: 8px;
+    padding-right: 8px;
+}
+
+#block2 {
+    padding-right: 8px;
+    float: right;
 }
