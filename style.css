@@ -2,12 +2,90 @@
 	margin: 0;
 	padding: 0;
 	border: 0;
+}
+
+/* BODY */
+
+body {
 	font-size: 100%;
-	font: inherit;
+	font: 15px/1.5 Arial, Helvetica, sans-serif;
 	vertical-align: baseline;
 }
 
-table {
+/* HEADER */
+
+header {
+    background: #272727;
+    color: whitesmoke;
+    padding-top: 30px;
+    min-height: 70px;
+    border-bottom: gray 3px solid;
+    margin-bottom: 40px;
+}
+
+header :is(h1) {
+    text-align: center;
+}
+
+/* FOOTER */
+
+footer {
+    padding: 20px;
+    margin-top: 100px;
+    color: white;
+    background-color: #272727;
+    text-align: center;
+    border-top: gray 3px solid;
+}
+
+/* TABLE */
+
+#calendarTable {
+    margin: auto;
+    width: 1000px;
+}
+
+/* FLEXBOXES */
+
+.flexboxContainer {
+    display: flex;
+}
+
+.flexboxContainer :is(div) {
+    width: 120px;
+    min-height: 36px;
+    margin: 1px;
+    padding: 4px;
+    border: 1px black solid;
+    border-radius: 1px;
+    word-break: break-all;
+    text-align: center;
+}
+
+.inputContainer {
+    display: flex;
+    align-items: center;
+}
+
+.inputContainer :is(span) {
+    width: 10ch;
+}
+
+/* SPACERS */
+
+.spacer {
+    height: 20px;
+}
+
+/* USER INPUT */
+
+#userInput {
+    margin: auto;
+    width: 994px;
+    height: 100px;
+}
+
+/* table {
     margin-left: auto;
     margin-right: auto;
 }
@@ -19,16 +97,19 @@ table {
     vertical-align: middle;
 }
 
+.tableCustomization.bc {
+    border-color: 2px solid green;
+}
+
 th, td {
     padding: 8px 8px;
     width: 100px;
 }
 
 th {
-    /* min-width: 100px; */
     height: 16px;
     font-weight: bold;
-}
+} */
 
 a {
     text-decoration: none;
@@ -53,8 +134,7 @@ input {
 .periodsInputStyle {
     width: 6ch;
     padding: 8px 8px;
-    margin: 8px 0;
-    /* text-align: center; */
+    margin-right: 16px;
     text-transform: uppercase;
 }
 
@@ -66,7 +146,6 @@ input {
 
 .addPeriodButton {
     text-align: center;
-    /* text-decoration: none; */
     font-size: 20px;
     width: 40px;
     height: 40px;
@@ -92,23 +171,23 @@ input {
     transform: translate(-50%, -90%); */
 /* } */
 
-.saveButton {
+/* .saveButton {
     background-color: #272727;
     color: white;
     padding: 10px 15px;
     border: none;
     border-radius: 4px;
-}
+} */
 
-inputDiv {
+/* inputDiv {
     width: 930px;
     height: 300px;
     border-style: solid;
     border-color: #272727;
     border-width: 1px;
-}
+} */
 
-wrapper {
+/* wrapper {
     padding: 20px 20px 20px 20px;
 }
 
@@ -121,4 +200,8 @@ wrapper {
 #block2 {
     padding-right: 8px;
     float: right;
-}
+} */
+
+/* @media(min-width: 768px) {
+
+} */

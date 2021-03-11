@@ -6,6 +6,7 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>Cadeiras da Faculdade</title>
+    <meta name="viewport" content="width=device-width">
     <meta name="description" content="Calendário da semana com os links para aula na PUCRS">
     <meta name="keywords" content="calendario, semanal, semana, link, zoom, faculdade, pucrs">
     <link rel="stylesheet" href="style.css">
@@ -13,20 +14,143 @@
 </head>
 
 <body>
-    <div>
-        <script src="src/classesTable.js"></script>
 
+    <header>
+        <div class="container">
+            <div id="branding">
+                <h1>Calendário de Aulas</h1>
+            </div>
+        </div>
+    </header>
+
+
+    <div id="calendarTable">
+        
+        <div id="calendarDays" class="flexboxContainer">
+            <div>Periodo</div>
+            <div>Segunda</div>
+            <div>Terça</div>
+            <div>Quarta</div>
+            <div>Quinta</div>
+            <div>Sexta</div>
+            <div>Sábado</div>
+            <div>Domingo</div>
+        </div>
+
+        <div id="AB-row" class="flexboxContainer">
+            <div>AB</div>
+            <div></div>
+            <div> </div>
+            <div> </div>
+            <div> </div>
+            <div> </div>
+            <div> </div>
+            <div> </div>
+        </div>
+
+        <div id="CD-row" class="flexboxContainer">
+            <div>CD</div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+
+        <div id="FG-row" class="flexboxContainer">
+            <div>FG</div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+
+        <div id="HI-row" class="flexboxContainer">
+            <div>HI</div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+
+        <div id="JK-row" class="flexboxContainer">
+            <div>JK</div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+
+        <div id="LM-row" class="flexboxContainer">
+            <div>LM</div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+
+        <div id="NP-row" class="flexboxContainer">
+            <div>NP</div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+
+    </div>
+
+    <div class="spacer"></div>
+
+    <div id="userInput">
+        
+        <div class="inputContainer">
+            <span>Nome:</span>
+            <input type="text" class="nameInputStyle">
+        </div>
+        <div class="inputContainer">
+            <span>Período:</span>
+            <input type="text" class="periodsInputStyle">
+            <button class="addPeriodButton" id="addPeriodID"> + </button>
+        </div>
+        <div class="inputContainer">
+            <span>URL:</span>
+            <input type="text" class="urlInputStyle">
+        </div>
+
+    </div>
+
+    <!-- <container style="overflow: scroll;" >
+        <script src="src/classesTable.js"></script>
         <inputDiv class="inputDiv inputPosition">
             <script src="src/inputTable.js"></script>
         </inputDiv>
-    </div>
+    </container> -->
+
+    <footer>
+        <h3 id="footerH1">Tenha um ótimo dia!</h3>
+    </footer>
+
 </body>
 
 </html>
 
 
 <!-- <td rowspan="2">AGES</td> -->
-
-<!-- video 2 -->
-<!-- setup relative and absolute positions -->
 

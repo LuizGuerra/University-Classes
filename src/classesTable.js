@@ -38,7 +38,11 @@ function createTable(data) {
 
     var headerRow = document.createElement('tr');
     for (var i = 0; i < 8; i++) {
-        headerRow.appendChild( createTh(headerTexts[i]) );
+        let th = createTh(headerTexts[i])
+        
+            th.classList.add('bc');
+        
+        headerRow.appendChild( th  );
     }
     table.appendChild(headerRow);
 
