@@ -39,9 +39,7 @@ function createTable(data) {
     var headerRow = document.createElement('tr');
     for (var i = 0; i < 8; i++) {
         let th = createTh(headerTexts[i])
-        
             th.classList.add('bc');
-        
         headerRow.appendChild( th  );
     }
     table.appendChild(headerRow);
@@ -55,10 +53,16 @@ function createTable(data) {
 
         for (i in classes[index]) {
             if (classes[index][i] == null) {
-                row.appendChild( createTd(" ") );
+                var td = createTd(" ");
+                row.appendChild( td );
             } else {
                 var td = document.createElement('td');
                 td.classList.add("tableCustomization");
+                console.log(index + ' - ' + i);
+                if (index == 5 && i == 1) {
+                    console.log('reached');
+                    td.id = 'tagged';
+                }
                 td.appendChild( tdWithLink(classes[index][i]) );
                 row.appendChild(td);
             }
@@ -67,16 +71,11 @@ function createTable(data) {
     }
 
     
-    table.classList.add("tablePosition");
+    // table.classList.add("tablePosition");
     table.classList.add("tableCustomization");
+    table.style.marginTop = '60px';
 
     body.appendChild(table);
-
-    
-    
-
-    // p.innerHTML = 'hello world';
-    // body.appendChild(p);
 }
 
 createTable(data);

@@ -12,7 +12,7 @@ function inputTable() {
         if (line == 0) {
             tr.appendChild( createNameInput() );
         } else if (line == 1) {
-            tr.id = 'periodRow'
+            tr.id = 'tagged';
             tr.appendChild( createPeriodInput() )
             tr.appendChild( createPeriodAddButton() )
 
@@ -31,10 +31,7 @@ function inputTable() {
     rw.appendChild(bt);
     table.appendChild(rw);
 
-    table.classList.add('inputPosition');
-
-
-
+    // table.classList.add('inputPosition');
     body.appendChild(table);
 }
 inputTable();

@@ -40,14 +40,34 @@ footer {
 
 /* TABLE */
 
-#calendarTable {
-    margin: auto;
-    width: 1000px;
+table {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+th, td {
+    border: 1px solid #272727;
+    padding: 8px;
+    margin: 8px;
+    width: 100px;
+}
+
+th {
+    height: 16px;
+    font-weight: bold;
+}
+
+/* LINK */
+
+a {
+    text-decoration: none;
+    color: #272727;
+    display: block;
 }
 
 /* FLEXBOXES */
 
-.flexboxContainer {
+/* .flexboxContainer {
     display: flex;
 }
 
@@ -60,14 +80,14 @@ footer {
     border-radius: 1px;
     word-break: break-all;
     text-align: center;
-}
+} */
 
 .inputContainer {
     display: flex;
     align-items: center;
 }
 
-.inputContainer :is(span) {
+.inputContainer span {
     width: 10ch;
 }
 
@@ -79,44 +99,6 @@ footer {
 
 /* USER INPUT */
 
-#userInput {
-    margin: auto;
-    width: 994px;
-    height: 100px;
-}
-
-/* table {
-    margin-left: auto;
-    margin-right: auto;
-}
-
-.tableCustomization {
-    border: 1px solid #272727;
-    border-collapse: collapse;
-    text-align: center;
-    vertical-align: middle;
-}
-
-.tableCustomization.bc {
-    border-color: 2px solid green;
-}
-
-th, td {
-    padding: 8px 8px;
-    width: 100px;
-}
-
-th {
-    height: 16px;
-    font-weight: bold;
-} */
-
-a {
-    text-decoration: none;
-    color: #272727;
-    display: block;
-}
-
 input {
     box-sizing: border-box;
     border-style: groove;
@@ -125,8 +107,14 @@ input {
     user-select: none;
 }
 
+.userInput {
+    margin: auto;
+    width: 960px;
+    height: 100px;
+}
+
 .nameInputStyle {
-    width: 50ch;
+    width: 100%;
     padding: 8px 8px;
     margin: 8px 0;
 }
@@ -139,9 +127,10 @@ input {
 }
 
 .urlInputStyle {
-    width: 100ch;
+    width: 100%;
     padding: 8px 8px;
     margin: 8px 0;
+    justify-content: left;
 }
 
 .addPeriodButton {
@@ -155,52 +144,16 @@ input {
     border-width: 0.5px;
 }
 
-/* .tablePosition {
-    position: relative; */
-    /* position: fixed;
-    top: 10%;
-    left: 50%;
-    transform: translate(-50%, -10%); */
-/* } */
 
-/* .inputPosition {
-    position: relative; */
-    /* position: fixed;
-    top: 90%;
-    left: 50%;
-    transform: translate(-50%, -90%); */
-/* } */
-
-/* .saveButton {
+.saveButton {
     background-color: #272727;
     color: white;
     padding: 10px 15px;
     border: none;
     border-radius: 4px;
-} */
-
-/* inputDiv {
-    width: 930px;
-    height: 300px;
-    border-style: solid;
-    border-color: #272727;
-    border-width: 1px;
-} */
-
-/* wrapper {
-    padding: 20px 20px 20px 20px;
 }
 
-#block1 {
-    float: left;
-    padding-left: 8px;
-    padding-right: 8px;
-}
 
-#block2 {
-    padding-right: 8px;
-    float: right;
-} */
 
 /* @media(min-width: 768px) {
 
