@@ -9,7 +9,6 @@
 body {
 	font-size: 100%;
 	font: 15px/1.5 Arial, Helvetica, sans-serif;
-	vertical-align: baseline;
 }
 
 /* HEADER */
@@ -133,7 +132,6 @@ input {
     border-style: solid;
     border-color: darkgray;
     border-width: 0.5px;
-    line-height: 10px;
 }
 
 .saveButton {
