@@ -31,7 +31,7 @@ header :is(h1) {
 
 footer {
     padding: 20px;
-    margin-top: 100px;
+    margin-top: 160px;
     color: white;
     background-color: #272727;
     text-align: center;
@@ -43,18 +43,24 @@ footer {
 table {
     margin-left: auto;
     margin-right: auto;
+    text-align: center;
 }
 
 th, td {
-    border: 1px solid #272727;
     padding: 8px;
     margin: 8px;
     width: 100px;
+    border-radius: 4px;
+}
+
+td {
+    border: 1px solid #272727;
 }
 
 th {
     height: 16px;
     font-weight: bold;
+    border: 1.5px #272727 solid;
 }
 
 /* LINK */
@@ -66,21 +72,6 @@ a {
 }
 
 /* FLEXBOXES */
-
-/* .flexboxContainer {
-    display: flex;
-}
-
-.flexboxContainer :is(div) {
-    width: 120px;
-    min-height: 36px;
-    margin: 1px;
-    padding: 4px;
-    border: 1px black solid;
-    border-radius: 1px;
-    word-break: break-all;
-    text-align: center;
-} */
 
 .inputContainer {
     display: flex;
@@ -114,7 +105,7 @@ input {
 }
 
 .nameInputStyle {
-    width: 100%;
+    width: 50ch;
     padding: 8px 8px;
     margin: 8px 0;
 }
@@ -127,7 +118,7 @@ input {
 }
 
 .urlInputStyle {
-    width: 100%;
+    width: 120ch;
     padding: 8px 8px;
     margin: 8px 0;
     justify-content: left;
@@ -142,18 +133,17 @@ input {
     border-style: solid;
     border-color: darkgray;
     border-width: 0.5px;
+    line-height: 10px;
 }
-
 
 .saveButton {
     background-color: #272727;
     color: white;
+    font-size: medium;
     padding: 10px 15px;
     border: none;
     border-radius: 4px;
 }
-
-
 
 /* @media(min-width: 768px) {
 
