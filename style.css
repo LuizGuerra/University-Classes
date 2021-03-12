@@ -105,7 +105,7 @@ input {
 }
 
 .nameInputStyle {
-    width: 50ch;
+    width: 120ch;
     padding: 8px 8px;
     margin: 8px 0;
 }
@@ -137,12 +137,22 @@ input {
 }
 
 .saveButton {
+    /* STYLE */
     background-color: #272727;
     color: white;
     font-size: medium;
-    padding: 10px 15px;
+    padding: 12px 36px;
     border: none;
     border-radius: 4px;
+    /* CENTER VIEW IN DIV */
+    position: absolute;
+    left: 50%;
+    -ms-transform: translateX(-50%);
+    transform: translateX(-50%);
+}
+
+.centerButtonDiv {
+    position: relative;
 }
 
 /* @media(min-width: 768px) {
