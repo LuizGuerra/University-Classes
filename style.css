@@ -75,6 +75,7 @@ a {
 .inputContainer {
     display: flex;
     align-items: center;
+    flex-wrap: wrap;
 }
 
 .inputContainer span {
@@ -122,6 +123,8 @@ input {
     margin: 8px 0;
     justify-content: left;
 }
+
+/* BUTTONS */
 
 .addPeriodButton {
     text-align: center;

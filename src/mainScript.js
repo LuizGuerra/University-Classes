@@ -4,10 +4,14 @@ const letterTimes = ['AB', 'CD', 'FG', 'HI', 'JK', 'LM', 'NP'];
 // Important data
 var data = localStorage.getItem('Open-Classes-Website');
 var isFirstTimeInSite = data == null;
+
+// HTML Tags
 var table = document.getElementsByTagName('table')[0];
+var periodAddButton = document.getElementById('addPeriodID');
 
 function main() {
-    loadCalendar();  
+    loadCalendar(); 
+    setupInputButton() ;
 }
 main();
 
@@ -53,6 +57,25 @@ function createLink(lesson, url) {
     return a;
 }
 
+function setupInputButton() {
+    periodAddButton.onclick = periodAddButtonAction;
+}
+
+function periodAddButtonAction() {
+    // Tags
+    var inputContainer = document.getElementById('periodContainer');
+    // Verify if it have enough
+    if (inputContainer.children.length == 16) {
+        return
+    }
+    // Create input
+    var input = document.createElement('input');
+    input.type = 'text';
+    input.classList.add('periodsInputStyle');
+    input.placeholder = '2JK';
+    inputContainer.insertBefore(input, periodAddButton);
+}
+
 function removeEmptyRows() {
     console.log('Removing empty rows');
     // Se for primeira vez, mostra tabela vazia
@@ -62,7 +85,7 @@ function removeEmptyRows() {
     // Se não for primeira vez, remove as vazias
 }
 
-// document.getElementById('AB_Row').cells[0].appendChild(txt)
+
 
 // uhh... Foo?
 
