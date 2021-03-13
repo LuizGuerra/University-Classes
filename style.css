@@ -6,9 +6,16 @@
 
 /* BODY */
 
+html, body{
+    height: 100%;
+    width: 100%;
+}
+
 body {
 	font-size: 100%;
 	font: 15px/1.5 Arial, Helvetica, sans-serif;
+    display: flex;
+    flex-direction: column;
 }
 
 /* HEADER */
@@ -20,6 +27,7 @@ header {
     min-height: 70px;
     border-bottom: gray 3px solid;
     margin-bottom: 40px;
+    width: 100%;
 }
 
 header :is(h1) {
@@ -30,19 +38,36 @@ header :is(h1) {
 
 footer {
     padding: 20px;
-    margin-top: 160px;
     color: white;
     background-color: #272727;
     text-align: center;
     border-top: gray 3px solid;
+    flex-shrink: 0;
+}
+
+/* MAIN */
+
+.content{
+    flex: 1 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow: auto;
 }
 
 /* TABLE */
 
 table {
-    margin-left: auto;
-    margin-right: auto;
     text-align: center;
+}
+
+.table-wrapper{
+    width: 90%;
+    flex-wrap: wrap;
+    display: flex;
+    flex-direction: column;
+    overflow-x: auto;
+    align-items: center;
 }
 
 th, td {
@@ -76,10 +101,8 @@ a {
     display: flex;
     align-items: center;
     flex-wrap: wrap;
-}
-
-.inputContainer span {
-    width: 10ch;
+    width: 50%;
+    margin-bottom: 8px;
 }
 
 /* SPACERS */
@@ -99,29 +122,41 @@ input {
 }
 
 .userInput {
-    margin: auto;
-    width: 960px;
-    height: 100px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 16px;
+    margin-bottom: 16px;
+    width: 100%;
 }
 
 .nameInputStyle {
-    width: 120ch;
+    width: 100%;
     padding: 8px 8px;
     margin: 8px 0;
 }
 
 .periodsInputStyle {
-    width: 6ch;
     padding: 8px 8px;
     margin-right: 16px;
     text-transform: uppercase;
 }
 
 .urlInputStyle {
-    width: 120ch;
     padding: 8px 8px;
     margin: 8px 0;
     justify-content: left;
+    width: 100%;
+}
+
+.col{
+    display: flex;
+    flex-direction: column;
+}
+
+.flex-end{
+    display: flex;
+    align-items: flex-end;
 }
 
 /* BUTTONS */
@@ -145,17 +180,22 @@ input {
     padding: 12px 36px;
     border: none;
     border-radius: 4px;
-    /* CENTER VIEW IN DIV */
-    position: absolute;
-    left: 50%;
-    -ms-transform: translateX(-50%);
-    transform: translateX(-50%);
 }
 
 .centerButtonDiv {
     position: relative;
 }
 
-/* @media(min-width: 768px) {
+.flex-end{
+    display: flex;
+    align-items: flex-end;
+}
 
-} */
+@media (min-width: 320px) and (max-width: 480px)  {
+    .inputContainer {
+        display: flex;
+        align-items: center;
+        flex-wrap: wrap;
+        width: 70%;
+    }
+}

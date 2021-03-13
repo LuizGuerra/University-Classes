@@ -15,115 +15,119 @@
 
 <body>
 
-    <header>
-        <div class="container">
-            <div id="branding">
-                <h1>Calendário de Aulas</h1>
-            </div>
-        </div>
-    </header>
+    <div class="content">
 
-    <div style="margin: 20px;"> <!-- overflow: scroll; -->
-        <table>
-            <tr>
-                <th>Período</th>
-                <th>Segunda</th>
-                <th>Terça</th>
-                <th>Quarta</th>
-                <th>Quinta</th>
-                <th>Sexta</th>
-                <th>Sábado</th>
-                <th>Domingo</th>
-            </tr>
-    
-            <tr id="AB_Row">
-                <td>AB</td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-            </tr>
-            
-            <tr id="CD_Row">
-                <td>CD</td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-            </tr>
-    
-            <tr id="FG_Row">
-                <td>FG</td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-            </tr>
-    
-            <tr id="HI_Row">
-                <td>HI</td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-            </tr>
-    
-            <tr id="JK_Row">
-                <td>JK</td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-            </tr>
-    
-            <tr id="LM_Row">
-                <td>LM</td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-            </tr>
-    
-            <tr id="NP_Row">
-                <td>NP</td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-            </tr>
-        </table>
-    
-        <div class="spacer"></div>
-    
+        <header>
+            <div class="container">
+                <div id="branding">
+                    <h1>Calendário de Aulas</h1>
+                </div>
+            </div>
+        </header>
+
+        <div class="table-wrapper">
+            <table>
+                <tr>
+                    <th>Período</th>
+                    <th>Segunda</th>
+                    <th>Terça</th>
+                    <th>Quarta</th>
+                    <th>Quinta</th>
+                    <th>Sexta</th>
+                    <th>Sábado</th>
+                    <th>Domingo</th>
+                </tr>
+
+                <tr id="AB_Row">
+                    <td>AB</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+
+                <tr id="CD_Row">
+                    <td>CD</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+
+                <tr id="FG_Row">
+                    <td>FG</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+
+                <tr id="HI_Row">
+                    <td>HI</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+
+                <tr id="JK_Row">
+                    <td>JK</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+
+                <tr id="LM_Row">
+                    <td>LM</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+
+                <tr id="NP_Row">
+                    <td>NP</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+            </table>
+        </div>
+
         <div class="userInput">
             <div class="inputContainer">
                 <span>Nome:</span>
-                <input type="text" class="nameInputStyle" id="lessonNameID" placeholder="Nome da cadeira" autocomplete="off">
+                <input type="text" class="nameInputStyle" id="lessonNameID" placeholder="Nome da cadeira"
+                    autocomplete="off">
             </div>
-            <div class="inputContainer" id="periodContainer">
-                <span>Período:</span>
-                <input type="text" class="periodsInputStyle" placeholder="2JK" autocomplete="off" maxlength="3">
+            <div class="inputContainer flex-end" id="periodContainer">
+                <div class="col">
+                    <span>Período:</span>
+                    <input type="text" class="periodsInputStyle" placeholder="2JK" autocomplete="off" maxlength="3">
+                </div>
                 <button class="addPeriodButton" id="addPeriodID"> + </button>
             </div>
             <div class="inputContainer">
@@ -150,4 +154,3 @@
 
 
 <!-- <td rowspan="2">AGES</td> -->
-
