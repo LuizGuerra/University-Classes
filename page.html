@@ -119,21 +119,21 @@
         <div class="userInput">
             <div class="inputContainer">
                 <span>Nome:</span>
-                <input type="text" class="nameInputStyle" placeholder="Nome da cadeira">
+                <input type="text" class="nameInputStyle" id="lessonNameID" placeholder="Nome da cadeira" autocomplete="off">
             </div>
             <div class="inputContainer" id="periodContainer">
                 <span>Período:</span>
-                <input type="text" class="periodsInputStyle" placeholder="2JK">
+                <input type="text" class="periodsInputStyle" placeholder="2JK" autocomplete="off" maxlength="3">
                 <button class="addPeriodButton" id="addPeriodID"> + </button>
             </div>
             <div class="inputContainer">
                 <span>URL:</span>
-                <input type="text" class="urlInputStyle" placeholder="URL da aula aqui">
+                <input type="text" class="urlInputStyle" id="urlID" placeholder="URL da aula aqui" autocomplete="off">
             </div>
 
             <div class="spacer"></div>
             <div class="centerButtonDiv">
-                <button class="saveButton">Salvar</button>
+                <button class="saveButton" id="saveButtonID">Salvar</button>
             </div>
         </div>
     </div>
