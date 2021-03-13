@@ -103,7 +103,7 @@ function setupSaveButton() {
         const lessonName = document.getElementById('lessonNameID').value;
         const classesDivChildren = document.getElementById('periodContainer').children;
         const periods = Array.from(classesDivChildren)
-            .filter(x => x.tagName == 'INPUT')
+            .filter(x => x.tagName == 'INPUT' && x.value != '')
             .map(x => x.value.toUpperCase());
         const url = document.getElementById('urlID').value;
         if (lessonName.length == 0 || !areValidPeriods(periods) || !isValidURL(url)){
