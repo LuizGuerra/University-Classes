@@ -101,6 +101,8 @@ a {
     display: flex;
     align-items: center;
     flex-wrap: wrap;
+    width: 50%;
+    margin-bottom: 8px;
 }
 
 /* SPACERS */
@@ -125,6 +127,7 @@ input {
     align-items: center;
     margin-top: 16px;
     margin-bottom: 16px;
+    width: 100%;
 }
 
 .nameInputStyle {
@@ -134,7 +137,6 @@ input {
 }
 
 .periodsInputStyle {
-    width: 6ch;
     padding: 8px 8px;
     margin-right: 16px;
     text-transform: uppercase;
@@ -145,6 +147,16 @@ input {
     margin: 8px 0;
     justify-content: left;
     width: 100%;
+}
+
+.col{
+    display: flex;
+    flex-direction: column;
+}
+
+.flex-end{
+    display: flex;
+    align-items: flex-end;
 }
 
 /* BUTTONS */
@@ -174,6 +186,16 @@ input {
     position: relative;
 }
 
-/* @media(min-width: 768px) {
+.flex-end{
+    display: flex;
+    align-items: flex-end;
+}
 
-} */
+@media (min-width: 320px) and (max-width: 480px)  {
+    .inputContainer {
+        display: flex;
+        align-items: center;
+        flex-wrap: wrap;
+        width: 70%;
+    }
+}
