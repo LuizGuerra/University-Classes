@@ -105,6 +105,10 @@ a {
     margin-bottom: 8px;
 }
 
+.inputContainer input {
+    margin-top: 0.5rem;
+}
+
 /* SPACERS */
 
 .spacer {
@@ -138,6 +142,7 @@ input {
 
 .periodsInputStyle {
     padding: 8px 8px;
+    width: 6ch;
     margin-right: 16px;
     text-transform: uppercase;
 }

@@ -149,7 +149,7 @@ function periodAddButtonAction() {
     // Tags
     var inputContainer = document.getElementById('periodContainer');
     // Verify if it have enough
-    if (inputContainer.children.length == 16) {
+    if (inputContainer.children.length == 12) {
         return
     }
     // Create input
