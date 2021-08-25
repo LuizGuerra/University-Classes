@@ -1,160 +1,212 @@
 <!DOCTYPE html>
 
-<html>
+<html lang="pt-br">
 
-<head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Cadeiras da Faculdade</title>
-    <meta name="viewport" content="width=device-width">
-    <meta name="description" content="Calendário da semana com os links para aula na PUCRS">
-    <meta name="keywords" content="calendario, semanal, semana, link, zoom, faculdade, pucrs">
-    <link rel="stylesheet" href="style.css">
-    <link rel="shortcut icon" type="image/x-icon" href="favicon.ico" >
-    <link rel="icon" type="image/x-icon" href="favicon.ico">
-</head>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Calendário de Aulas PUCRS</title>
+        <meta name="viewport" content="width=device-width">
+        <meta name="description" content="Calendário da semana com links para aulas na PUCRS">
+        <meta name="keywords" content="calendario, semanal, semana, link, zoom, faculdade, pucrs">
+        <meta name="author" content="Luiz Pedro Franciscatto Guerra">
+        <link rel="stylesheet" href="resources/style.css">
+        <link rel="shortcut icon" type="image/x-icon" href="resources/favicon.ico">
+        <link rel="icon" type="image/x-icon" href="resources/favicon.ico">
+    </head>
 
-<body>
+    <body>
+        <div class="content">
 
-    <div class="content">
+            <header>
+                <div class="leftFlex">
+                    <div style="display: flex;">
+                        <button class="headerButton" id="autoOpener">
+                            <img id="autoImage" class="svgButton" src="resources/auto.svg" alt="">
+                            <h4>Auto-Join</h4>
+                        </button>
+                        <div style="width: 1rem;"></div>
+                        <button class="headerButton" id="targetColors">
+                            <img id="focusImage" class="svgButton" src="resources/focus.svg" alt="">
+                            <h4>Destacar Hoje</h4>
+                        </button>
+                    </div>
+                </div>
+                <div class="container">
+                    <div id="branding">
+                        <h1>Calendário de Aulas</h1>
+                        <a href="https://gitlab.com/LuizGuerra/University-Classes" target="_blank">
+                            <h5>Um projeto open source</h5>
+                        </a>
+                    </div>
+                </div>
 
-        <header>
-            <div class="container">
-                <div id="branding">
-                    <h1>Calendário de Aulas</h1>
+                <div class="rightFlex">
+                    <div style="display: flex;">
+                        <button class="headerButton" id="editButton">
+                            <img id="editImage" class="svgButton" src="resources/edit.svg" alt="">
+                            <h4>Modo de Edição</h4>
+                        </button>
+                        <div style="width: 1rem;"></div>
+                        <button class="headerButton" id="purgeButton">
+                            <img id="purgeImage" class="svgButton" src="resources/fire.svg" alt="">
+                            <h4>Excluir Tudo</h4>
+                        </button>
+                    </div>
+
+                </div>
+            </header>
+
+            <div class="table-wrapper">
+                <table>
+                    <tr>
+                        <th>Período</th>
+                        <th>Segunda</th>
+                        <th>Terça</th>
+                        <th>Quarta</th>
+                        <th>Quinta</th>
+                        <th>Sexta</th>
+                        <th>Sábado</th>
+                        <th>Domingo</th>
+                    </tr>
+
+                    <tr id="AB_Row" title="8h - 9h40min">
+                        <td>AB</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+
+                    <tr id="CD_Row" title="9h50min - 11h30min">
+                        <td>CD</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+
+                    <tr id="FG_Row" title="14h - 15h40min">
+                        <td>FG</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+
+                    <tr id="HI_Row" title="15h50min - 15h30min">
+                        <td>HI</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+
+                    <tr id="JK_Row" title="17h30 - 19h">
+                        <td>JK</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+
+                    <tr id="LM_Row" title="19h15min - 20h45min">
+                        <td>LM</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+
+                    <tr id="NP_Row" title="21h - 22h30min">
+                        <td>NP</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                </table>
+            </div>
+
+            <div class="userInput">
+                <div class="inputContainer">
+                    <span>Nome:</span>
+                    <input type="text" class="nameInputStyle" id="lessonNameID" placeholder="Nome da cadeira"
+                        autocomplete="off">
+                </div>
+                <div class="inputContainer flex-end" id="periodContainer">
+                    <div class="col">
+                        <span>Períodos:</span>
+                        <input type="text" class="periodsInputStyle" placeholder="2JK" autocomplete="off" maxlength="3">
+                    </div>
+                    <button class="addPeriodButton" id="addPeriodID"> + </button>
+                    <button class="removePeriodButton" id="removePeriodID"> - </button>
+                </div>
+                <div class="inputContainer" style="margin-top: 0.5rem;">
+                    <span>URL:</span>
+                    <input type="text" class="urlInputStyle" id="urlID" placeholder="URL da aula aqui" autocomplete="off">
+                </div>
+
+                <div class="spacer"></div>
+
+                <div class="centerButtonDiv">
+                    <button class="saveButton" id="saveButtonID">Salvar</button>
                 </div>
             </div>
-        </header>
-
-        <div class="table-wrapper">
-            <table>
-                <tr>
-                    <th>Período</th>
-                    <th>Segunda</th>
-                    <th>Terça</th>
-                    <th>Quarta</th>
-                    <th>Quinta</th>
-                    <th>Sexta</th>
-                    <th>Sábado</th>
-                    <th>Domingo</th>
-                </tr>
-
-                <tr id="AB_Row">
-                    <td>AB</td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                </tr>
-
-                <tr id="CD_Row">
-                    <td>CD</td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                </tr>
-
-                <tr id="FG_Row">
-                    <td>FG</td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                </tr>
-
-                <tr id="HI_Row">
-                    <td>HI</td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                </tr>
-
-                <tr id="JK_Row">
-                    <td>JK</td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                </tr>
-
-                <tr id="LM_Row">
-                    <td>LM</td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                </tr>
-
-                <tr id="NP_Row">
-                    <td>NP</td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                </tr>
-            </table>
         </div>
 
-        <div class="userInput">
-            <div class="inputContainer">
-                <span>Nome:</span>
-                <input type="text" class="nameInputStyle" id="lessonNameID" placeholder="Nome da cadeira"
-                    autocomplete="off">
+        <footer>
+            <h3>Tenha um ótimo dia!</h3>
+            <span>Versão 1.2.0</span>
+            <br>
+            <span>Esse site é um projeto <i>OpenSource</i> e não armazena nenhuma informação do usuário na internet, tudo é salvo localmente, no navegador. Caso o computador/navegador seja resetado/deletado, naturalmente, as informações serão perdidas.</span>
+            <br>
+            <span>Caso encontre algum <i>bug</i>, por favor, me contate:</span>
+            <div style="vertical-align: middle;">
+                <span>Luiz Guerra (owner):</span>
+                <a href="https://twitter.com/LuizPedroGuerra" target="_blank" title="Meu Twitter">
+                    <img src="resources/twitter.svg" alt="Twitter logo">
+                </a>
+                <a href="https://github.com/LuizGuerra/" target="_blank"  title="Meu GitHub">
+                    <img src="resources/github.svg" alt="GitHub logo">
+                </a>
             </div>
-            <div class="inputContainer flex-end" id="periodContainer">
-                <div class="col">
-                    <span>Período:</span>
-                    <input type="text" class="periodsInputStyle" placeholder="2JK" autocomplete="off" maxlength="3">
-                </div>
-                <button class="addPeriodButton" id="addPeriodID"> + </button>
+            <div style="vertical-align: middle;">
+                <span>Vanflux (fork):</span>
+                <a href="https://github.com/vanflux/" target="_blank"  title="Meu GitHub">
+                    <img src="resources/github.svg" alt="GitHub logo">
+                </a>
             </div>
-            <div class="inputContainer" style="margin-top: 0.5rem;">
-                <span>URL:</span>
-                <input type="text" class="urlInputStyle" id="urlID" placeholder="URL da aula aqui" autocomplete="off">
-            </div>
+        </footer>
 
-            <div class="spacer"></div>
+        <!-- Load Mocked Data -->
+        <!-- <script src="src/mockedData.js"></script> -->
 
-            <div class="centerButtonDiv">
-                <button class="saveButton" id="saveButtonID">Salvar</button>
-            </div>
-        </div>
-    </div>
+        <script src="src/utility.js"></script>
+        <script src="src/loadTable.js"></script>
+        <script src="src/loadButtonActions.js"></script>
 
-    <footer>
-        <h3 id="footerH1">Tenha um ótimo dia!</h3>
-    </footer>
-
-    <script src="src/utility.js"></script>
-    <script src="src/loadTable.js"></script>
-    <script src="src/loadButtonActions.js"></script>
-
-</body>
+    </body>
 
 </html>
-
-
-<!-- <td rowspan="2">AGES</td> -->
