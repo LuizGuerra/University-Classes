@@ -1,25 +1,50 @@
-// LOAD CALENDAR ACTION
+// LOAD CALENDAR
 // Verify if cache is empty
 if (jsonString == null) {
     jsonString = '';
-    return;
-}
-// If is not empty, load table
-let classes = JSON.parse(jsonString);
-for (i in classes) {
-    const lessonName = classes[i]['lesson'];
-    const periods = classes[i]['periods'];
-    const siteURL = classes[i]['url'];
-    for (j in periods) {
-        const rowId =  `${periods[j].slice(1)}_Row`;
-        const day = dayOfTheWeekIndex(periods[j]);
-        var cell = document.getElementById(rowId).cells[day+1];
-        let classLink = createLink(lessonName, siteURL);
-        cell.appendChild( classLink );
+} else {
+    // If is not empty, load table
+    let classes = JSON.parse(jsonString);
+    for (let clazz of classes) {
+        const lessonName = clazz.lesson;
+        const periods = clazz.periods;
+        const siteURL = clazz.url;
+        for (let period of periods) {
+            const rowId = `${period.slice(1)}_Row`;
+            const day = dayOfTheWeekIndex(period);
+            var cell = document.getElementById(rowId).cells[day + 1];
+            let classLink = createLink(lessonName, siteURL);
+            cell.appendChild(classLink);
+        }
     }
 }
 
+// Change column color if isn't today.
+for (let i = 1; i < 8; i++) {
+    for (let j = 1; j < 8; j++) {
+        if (weekDay != i) {
+            table.rows[j].cells[i].style.borderColor = 'LightGray';
+        }
+    }
+}
 
-// document.getElementById('tagged').style.borderColor = 'green';
-// document.getElementById('tagged').style.borderWidth = '3px';
-// document.getElementById('tagged').style.borderRadius = '10px';
+if (focusString == null || focusString == 'y') {
+    focusButton.classList.add('buttonIsSelected');
+    focusButtonIsSelected = true;
+    var cell = updateClassBackground();
+    try {
+        document.getElementById(`${now.now}_Row`).cells[weekDay];
+        cell.title = 'Current class';
+    } catch (error) {
+        try {
+            document.getElementById(`${now.next}_Row`).cells[weekDay];
+            cell.title = 'Next class';
+        } catch (error) { }
+    }
+}
+
+if (autoOpenerString != null && autoOpenerString == 'y') {
+    autoButton.classList.add('buttonIsSelected');
+    autoButtonIsSelected = true;
+    openURL();
+}
